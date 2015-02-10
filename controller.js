@@ -6,13 +6,9 @@ angular.module('app')
         function ($scope, UserFactory) {
             'use strict ';
             $scope.users = UserFactory.getUsers();
-            /*
-            for (var i=0; i<$scope.users.length; i++){
-                var firstname = $scope.users[i].firstname;
-                var lastname = $scope.users[i].lastname;
-                //récupérer les informations et les afficher pour chaque utilisateur
-            }*/
+
         }
+
     ])
     .controller('viewCtrl', [
         '$scope',
@@ -20,5 +16,5 @@ angular.module('app')
         'UserFactory',
         function ($scope, $stateParams, UserFactory) {
             'use strict ';
-            $scope.user = UserFactory.getUser($stateParams.id);
+           $scope.user = UserFactory.getUser(parseInt($stateParams.id));
     }]);

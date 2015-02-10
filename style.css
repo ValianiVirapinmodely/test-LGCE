@@ -1,0 +1,80 @@
+html
+{
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+body
+{
+    height:100%;
+    margin: 0px;
+    padding: 0px;
+}
+    
+div.container
+{
+    height:100%;
+}
+
+div.profile
+{
+	border-width:1px;
+ 	border-style:solid;
+ 	border-color:black;
+ 	margin: 15px 15px 15px 15px;
+ 	padding: 15px 15px 15px 15px;
+ 	float:left;
+}
+
+img.photo
+{
+	width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.name
+{
+	text-align: center;
+	font-size: 25px;
+}
+
+a.profileButton
+{
+	float:right;
+}
+
+div.profileView
+{
+	width: 50%;
+	border-width:1px;
+ 	border-style:solid;
+ 	border-color:black;
+ 	padding: 15px 15px 15px 15px;
+ 	margin-left: auto;
+    margin-right: auto;
+}
+
+div.description
+{
+	padding: 10px 10px 10px 10px;
+ 	position: relative;
+ 	top: 50%
+}
+
+a.backButton
+{
+	float:right;
+}
+
+input[name="search"]
+{
+	width: 90%;
+	margin:	15px 15px 15px 15px;
+}

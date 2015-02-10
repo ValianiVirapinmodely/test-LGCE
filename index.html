@@ -13,31 +13,35 @@
     <script src="./controller.js"></script>
     <script src="./factory.js"></script>
     
-    <style>
-        /* Some css if needed */
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+
 </head>
 
-<body>
+<body ng-app="app">
     <div class="container">
         
         <div ui-view></div>
+
         <script type="text/ng-template" id="index.html">
-            <tr ng-repeat="user in users">
-                <td>{{user.firstname}}</td>
-                <td>{{user.lastname}}</td>
-                <td> <img src={{user.photo}} width="50"> </img>
-                <td> <a href="/view/" + {{user.id}}> <button>Profil</button> </a>
-            </tr>
+            <input type="text" name="search" value="Recherche..."></input>
+             <div class="index" ng-repeat="user in users">
+                <div class="profile">
+                    <img class="photo" src={{user.photo}}> </img>
+                    <div class="name"> {{user.firstname}} {{user.lastname}} </div>
+                    <a class="profileButton" href="#view/{{user.id}}" > <button> Profil </button> </a>
+                </div>
+            </div>
         </script>
 
         <script type="text/ng-template"  id="view.html">
-            <tr>
-                <td>{{user.firstname}}</td>
-                <td>{{user.lastname}}</td>
-                <td> <img src={{user.photo}} width="50"> </img>
-                <td> <img src={{user.description}} width="50"> </img>
-            </tr>
+            <div class="profileView">
+                <div class="name"> {{user.firstname}} {{user.lastname}} </div>
+                <img class="photo" src={{user.photo}}> </img>
+                <div class="description"> {{user.description}} </div>
+                <a class="twitterAccountButton" href="{{user.twitter}}">Compte Twitter</a>
+                <a class="backButton" href="#"> <button>Retour</button></a>
+            </div>
         </script>
     </div>
 </body>
