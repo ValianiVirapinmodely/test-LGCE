@@ -23,10 +23,21 @@
         
         <div ui-view></div>
         <script type="text/ng-template" id="index.html">
-            // Your index.html template (code html)
+            <tr ng-repeat="user in users">
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td> <img src={{user.photo}} width="50"> </img>
+                <td> <a href="/view/" + {{user.id}}> <button>Profil</button> </a>
+            </tr>
         </script>
+
         <script type="text/ng-template"  id="view.html">
-            // Your view.html template (code html)
+            <tr>
+                <td>{{user.firstname}}</td>
+                <td>{{user.lastname}}</td>
+                <td> <img src={{user.photo}} width="50"> </img>
+                <td> <img src={{user.description}} width="50"> </img>
+            </tr>
         </script>
     </div>
 </body>
