@@ -53,6 +53,7 @@ a.profileButton
 div.profileView
 {
 	width: 50%;
+    min-width: 250px;
 	border-width:1px;
  	border-style:solid;
  	border-color:black;
